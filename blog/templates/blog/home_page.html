@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Сайт Сергея Курбатова</title>
-</head>
-<body>
- <h1>Сергей Курбатов</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Сайт Сергея Курбатова</title>
+    </head>
+    <body>
+        <h1>Сергей Курбатов</h1>
+        <div class="article_list">
+            {% for article in articles %}
+                <div class="article">
+                    <h2 class="article_title">{{ article.title }}</h2>
+                    <p class="article_summary">{{ article.summary }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
 </html>

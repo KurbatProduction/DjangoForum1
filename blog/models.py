@@ -3,7 +3,7 @@ from django.db import models
 
 class Article(models.Model):
     title = models.CharField(max_length=255)
-    summary = models.CharField(max_length=255)
+    summary = models.TextField()
     full_text = models.TextField()
     author = models.CharField(max_length=50, default='')
     source = models.CharField(max_length=255, default='')
